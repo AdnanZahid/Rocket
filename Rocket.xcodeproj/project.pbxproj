@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F60A749A2477C2D700FD0CB0 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A74992477C2D700FD0CB0 /* Ship.swift */; };
 		F6254DEE2477AFAE00A84F90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6254DED2477AFAE00A84F90 /* AppDelegate.swift */; };
-		F6254DF02477AFAE00A84F90 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F6254DEF2477AFAE00A84F90 /* GameScene.sks */; };
-		F6254DF22477AFAE00A84F90 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = F6254DF12477AFAE00A84F90 /* Actions.sks */; };
 		F6254DF42477AFAE00A84F90 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6254DF32477AFAE00A84F90 /* GameScene.swift */; };
 		F6254DF62477AFAE00A84F90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6254DF52477AFAE00A84F90 /* ViewController.swift */; };
 		F6254DF82477AFAF00A84F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6254DF72477AFAF00A84F90 /* Assets.xcassets */; };
 		F6254DFB2477AFB000A84F90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6254DF92477AFB000A84F90 /* Main.storyboard */; };
 		F6254E072477AFB000A84F90 /* RocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6254E062477AFB000A84F90 /* RocketTests.swift */; };
 		F6254E122477AFB000A84F90 /* RocketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6254E112477AFB000A84F90 /* RocketUITests.swift */; };
+		F6254E202477B16F00A84F90 /* PlatformGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6254E1F2477B16F00A84F90 /* PlatformGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F60A74992477C2D700FD0CB0 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
 		F6254DEA2477AFAE00A84F90 /* Rocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6254DED2477AFAE00A84F90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F6254DEF2477AFAE00A84F90 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		F6254DF12477AFAE00A84F90 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		F6254DF32477AFAE00A84F90 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		F6254DF52477AFAE00A84F90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F6254DF72477AFAF00A84F90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		F6254E0D2477AFB000A84F90 /* RocketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RocketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6254E112477AFB000A84F90 /* RocketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketUITests.swift; sourceTree = "<group>"; };
 		F6254E132477AFB000A84F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6254E1F2477B16F00A84F90 /* PlatformGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F60A74982477C2C700FD0CB0 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F60A74992477C2D700FD0CB0 /* Ship.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		F6254DE12477AFAE00A84F90 = {
 			isa = PBXGroup;
 			children = (
@@ -102,9 +110,9 @@
 		F6254DEC2477AFAE00A84F90 /* Rocket */ = {
 			isa = PBXGroup;
 			children = (
+				F60A74982477C2C700FD0CB0 /* Entities */,
+				F6254E212477B17D00A84F90 /* Generators */,
 				F6254DED2477AFAE00A84F90 /* AppDelegate.swift */,
-				F6254DEF2477AFAE00A84F90 /* GameScene.sks */,
-				F6254DF12477AFAE00A84F90 /* Actions.sks */,
 				F6254DF32477AFAE00A84F90 /* GameScene.swift */,
 				F6254DF52477AFAE00A84F90 /* ViewController.swift */,
 				F6254DF72477AFAF00A84F90 /* Assets.xcassets */,
@@ -131,6 +139,14 @@
 				F6254E132477AFB000A84F90 /* Info.plist */,
 			);
 			path = RocketUITests;
+			sourceTree = "<group>";
+		};
+		F6254E212477B17D00A84F90 /* Generators */ = {
+			isa = PBXGroup;
+			children = (
+				F6254E1F2477B16F00A84F90 /* PlatformGenerator.swift */,
+			);
+			path = Generators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,9 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6254DF02477AFAE00A84F90 /* GameScene.sks in Resources */,
 				F6254DF82477AFAF00A84F90 /* Assets.xcassets in Resources */,
-				F6254DF22477AFAE00A84F90 /* Actions.sks in Resources */,
 				F6254DFB2477AFB000A84F90 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,7 +281,9 @@
 			files = (
 				F6254DF62477AFAE00A84F90 /* ViewController.swift in Sources */,
 				F6254DF42477AFAE00A84F90 /* GameScene.swift in Sources */,
+				F6254E202477B16F00A84F90 /* PlatformGenerator.swift in Sources */,
 				F6254DEE2477AFAE00A84F90 /* AppDelegate.swift in Sources */,
+				F60A749A2477C2D700FD0CB0 /* Ship.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
