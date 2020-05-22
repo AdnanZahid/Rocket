@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		344FCCFD24788C160069796B /* Anton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FCCFC24788C160069796B /* Anton.swift */; };
 		F60A749A2477C2D700FD0CB0 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A74992477C2D700FD0CB0 /* Ship.swift */; };
 		F6254DEE2477AFAE00A84F90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6254DED2477AFAE00A84F90 /* AppDelegate.swift */; };
 		F6254DF42477AFAE00A84F90 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6254DF32477AFAE00A84F90 /* GameScene.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		344FCCFC24788C160069796B /* Anton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anton.swift; sourceTree = "<group>"; };
 		F60A74992477C2D700FD0CB0 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
 		F6254DEA2477AFAE00A84F90 /* Rocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6254DED2477AFAE00A84F90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		344FCCFB24788B910069796B /* Anton */ = {
+			isa = PBXGroup;
+			children = (
+				344FCCFC24788C160069796B /* Anton.swift */,
+			);
+			path = Anton;
+			sourceTree = "<group>";
+		};
 		F60A74982477C2C700FD0CB0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +120,7 @@
 		F6254DEC2477AFAE00A84F90 /* Rocket */ = {
 			isa = PBXGroup;
 			children = (
+				344FCCFB24788B910069796B /* Anton */,
 				F60A74982477C2C700FD0CB0 /* Entities */,
 				F6254E212477B17D00A84F90 /* Generators */,
 				F6254DED2477AFAE00A84F90 /* AppDelegate.swift */,
@@ -283,6 +294,7 @@
 				F6254DF42477AFAE00A84F90 /* GameScene.swift in Sources */,
 				F6254E202477B16F00A84F90 /* PlatformGenerator.swift in Sources */,
 				F6254DEE2477AFAE00A84F90 /* AppDelegate.swift in Sources */,
+				344FCCFD24788C160069796B /* Anton.swift in Sources */,
 				F60A749A2477C2D700FD0CB0 /* Ship.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,7 +462,7 @@
 				CODE_SIGN_ENTITLEMENTS = Rocket/Rocket.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = RBGT85CCQZ;
+				DEVELOPMENT_TEAM = 4B6T2H7DXN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Rocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
