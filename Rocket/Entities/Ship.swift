@@ -25,6 +25,7 @@ class Ship {
     node.physicsBody = SKPhysicsBody(rectangleOf: node.frame.size)
     node.physicsBody?.linearDamping = Constants.linearDamping
   }
+    
 
   func getNode() -> SKShapeNode {
     return node
