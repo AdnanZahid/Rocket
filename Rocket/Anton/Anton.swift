@@ -39,4 +39,14 @@ class Anton {
     let shouldJump = Bool.random()
     return shouldJump
   }
+
+  func write(distance: CGFloat,
+             upperBound: CGFloat,
+             lowerBound: CGFloat,
+             yPosition: CGFloat,
+             shouldJump: Bool) {
+    let shouldJumpInteger = shouldJump ? 1.0 : 0.0
+    FileHandler.write(to: Constants.iterationDataFile,
+                      content: "\(distance),\(upperBound),\(lowerBound),\(yPosition),\(shouldJumpInteger)\n")
+  }
 }

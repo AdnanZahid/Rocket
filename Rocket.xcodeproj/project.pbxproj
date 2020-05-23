@@ -130,7 +130,7 @@
 				344FCCFB24788B910069796B /* Anton */,
 				F60A74982477C2C700FD0CB0 /* Entities */,
 				F6BC044924789F13002FD80A /* External code */,
-				F6BC044424789D1C002FD80A /* File handling */,
+				F6BC044424789D1C002FD80A /* FileHandling */,
 				F6254E212477B17D00A84F90 /* Generators */,
 				F6254DED2477AFAE00A84F90 /* AppDelegate.swift */,
 				F6254DF72477AFAF00A84F90 /* Assets.xcassets */,
@@ -168,13 +168,13 @@
 			path = Generators;
 			sourceTree = "<group>";
 		};
-		F6BC044424789D1C002FD80A /* File handling */ = {
+		F6BC044424789D1C002FD80A /* FileHandling */ = {
 			isa = PBXGroup;
 			children = (
 				F6BC044524789D35002FD80A /* FileHandler.swift */,
 				F6BC044724789EE3002FD80A /* IterationData.csv */,
 			);
-			path = "File handling";
+			path = FileHandling;
 			sourceTree = "<group>";
 		};
 		F6BC044924789F13002FD80A /* External code */ = {

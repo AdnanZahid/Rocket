@@ -45,11 +45,8 @@ extension Anton.GameParameters: TensorGroup {
 
 /// Initialize an `Anton.GameParameters` dataset from a CSV file.
 extension Dataset where Element == Anton.GameParameters {
-  init(
-    contentsOfCSVFile: String, hasHeader: Bool, featureColumns: [Int], labelColumns: [Int]
-  ) {
+  init(contentsOfCSVFile: String, hasHeader: Bool, featureColumns: [Int], labelColumns: [Int]) {
     let np = Python.import("numpy")
-
     let featuresNp = np.loadtxt(
       contentsOfCSVFile,
       delimiter: ",",
