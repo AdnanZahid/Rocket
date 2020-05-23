@@ -7,16 +7,36 @@
 //
 
 import Foundation
+import TensorFlow
 
 class Anton {
-    func predict (distance: CGFloat,
-                  upperBound: CGFloat,
-                  lowerBound: CGFloat,
-                  yPosition: CGFloat,
-                  yVelocity: CGFloat ) -> Bool {
-        
-        let shouldJump = Bool.random()
-        
-        return shouldJump
-    }
+
+  struct GameParameters {
+    let features: Tensor<Float>
+    let labels: Tensor<Int32>
+  }
+
+  private enum Constants {
+    static let iterationDataFile = "IterationData.csv"
+  }
+
+  private let batchSize = 32
+  private let trainDataset: Dataset<GameParameters>?
+
+  init() {
+    trainDataset = Dataset(
+      contentsOfCSVFile: Constants.iterationDataFile,
+      hasHeader: true,
+      featureColumns: [0, 1, 2, 3],
+      labelColumns: [4]
+    ).batched(batchSize)
+  }
+
+  func predict(distance: CGFloat,
+               upperBound: CGFloat,
+               lowerBound: CGFloat,
+               yPosition: CGFloat) -> Bool {
+    let shouldJump = Bool.random()
+    return shouldJump
+  }
 }

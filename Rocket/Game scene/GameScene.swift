@@ -47,8 +47,8 @@ class GameScene: SKScene {
     moveWorldLeft()
     generatePlatformIfNeeded()
     let anton = Anton()
-    if(anton.predict(distance: 0, upperBound: 0, lowerBound: 0, yPosition: 0, yVelocity: 0)){
-        makeHeroJump()
+    if anton.predict(distance: 0, upperBound: 0, lowerBound: 0, yPosition: 0) {
+      makeHeroJump()
     }
   }
 }
