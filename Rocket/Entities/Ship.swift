@@ -15,7 +15,19 @@ class Ship {
     static let size: CGFloat = 20
     static let cornerRadius: CGFloat = 5
     static let linearDamping: CGFloat = 10
-    static let jumpSpeed: CGFloat = 1.2
+    static let jumpSpeed: CGFloat = 25
+    static let generationInterval = 10
+  }
+
+  private var currentFrames = 9
+
+  var shouldJump: Bool {
+    if currentFrames == Constants.generationInterval { currentFrames = 0; return true; }
+    return false
+  }
+
+  func incrementFrame() {
+    currentFrames += 1
   }
 
   var node = SKShapeNode(rectOf: CGSize(width: Constants.size, height: Constants.size), cornerRadius: Constants.cornerRadius)
@@ -25,7 +37,7 @@ class Ship {
     node.physicsBody = SKPhysicsBody(rectangleOf: node.frame.size)
     node.physicsBody?.linearDamping = Constants.linearDamping
   }
-    
+
 
   func getNode() -> SKShapeNode {
     return node

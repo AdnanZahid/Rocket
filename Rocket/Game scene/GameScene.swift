@@ -44,12 +44,34 @@ class GameScene: SKScene {
 
   override func update(_ currentTime: TimeInterval) {
     super.update(currentTime)
+
     moveWorldLeft()
     generatePlatformIfNeeded()
     let anton = Anton()
-    let shouldJump = anton.predict(distance: 0, upperBound: 0, lowerBound: 0, yPosition: 0)
-    if shouldJump { makeHeroJump() }
-    anton.write(distance: 0, upperBound: 0, lowerBound: 0, yPosition: 0, shouldJump: shouldJump)
+    let heroNode = hero.getNode()
+    guard let firstPlatform = platforms.first,
+          let topPlatform = firstPlatform.children.first,
+          let bottomPlatform = firstPlatform.children.last else { return }
+
+    let distance = firstPlatform.convert(firstPlatform.position, to: heroNode).x
+    let upperBound = topPlatform.convert(topPlatform.position, to: heroNode).y
+    let lowerBound = bottomPlatform.convert(bottomPlatform.position, to: heroNode).y
+    let yPosition = heroNode.frame.maxY
+
+    let shouldJump = anton.predict(distance: distance,
+                                   upperBound: upperBound,
+                                   lowerBound: lowerBound,
+                                   yPosition: yPosition)
+    print(shouldJump)
+    if shouldJump {
+      makeHeroJump()
+    }
+
+    anton.write(distance: distance,
+                upperBound: upperBound,
+                lowerBound: lowerBound,
+                yPosition: yPosition,
+                shouldJump: shouldJump)
   }
 }
 
@@ -58,9 +80,9 @@ extension GameScene: SKPhysicsContactDelegate {
     let bodyA = contact.bodyA
     let bodyB = contact.bodyB
     let isObstacleContact = bodyA.categoryBitMask == CategoryMasks.obstacle.rawValue ||
-      bodyB.categoryBitMask == CategoryMasks.obstacle.rawValue
+          bodyB.categoryBitMask == CategoryMasks.obstacle.rawValue
     let isNonobstacleContact = bodyA.categoryBitMask == CategoryMasks.nonObstacle.rawValue ||
-      bodyB.categoryBitMask == CategoryMasks.nonObstacle.rawValue
+          bodyB.categoryBitMask == CategoryMasks.nonObstacle.rawValue
     if isObstacleContact {
       gameOver()
     } else if isNonobstacleContact {
@@ -98,7 +120,10 @@ extension GameScene {
   }
 
   private func makeHeroJump() {
-    hero.jump()
+    hero.incrementFrame()
+    if hero.shouldJump {
+      hero.jump()
+    }
   }
 
   private func moveWorldLeft() {
