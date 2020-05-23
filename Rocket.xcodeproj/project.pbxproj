@@ -10,13 +10,16 @@
 		344FCCFD24788C160069796B /* Anton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FCCFC24788C160069796B /* Anton.swift */; };
 		F60A749A2477C2D700FD0CB0 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A74992477C2D700FD0CB0 /* Ship.swift */; };
 		F6254DEE2477AFAE00A84F90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6254DED2477AFAE00A84F90 /* AppDelegate.swift */; };
-		F6254DF42477AFAE00A84F90 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6254DF32477AFAE00A84F90 /* GameScene.swift */; };
 		F6254DF62477AFAE00A84F90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6254DF52477AFAE00A84F90 /* ViewController.swift */; };
 		F6254DF82477AFAF00A84F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6254DF72477AFAF00A84F90 /* Assets.xcassets */; };
 		F6254DFB2477AFB000A84F90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6254DF92477AFB000A84F90 /* Main.storyboard */; };
 		F6254E072477AFB000A84F90 /* RocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6254E062477AFB000A84F90 /* RocketTests.swift */; };
 		F6254E122477AFB000A84F90 /* RocketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6254E112477AFB000A84F90 /* RocketUITests.swift */; };
 		F6254E202477B16F00A84F90 /* PlatformGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6254E1F2477B16F00A84F90 /* PlatformGenerator.swift */; };
+		F6BC044624789D35002FD80A /* FileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC044524789D35002FD80A /* FileHandler.swift */; };
+		F6BC044824789EE3002FD80A /* IterationData.csv in Resources */ = {isa = PBXBuildFile; fileRef = F6BC044724789EE3002FD80A /* IterationData.csv */; };
+		F6BC044B24789F1D002FD80A /* TutorialDatasetCSVAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC044A24789F1D002FD80A /* TutorialDatasetCSVAPI.swift */; };
+		F6BC044E2478A084002FD80A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC044D2478A084002FD80A /* GameScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +44,6 @@
 		F60A74992477C2D700FD0CB0 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
 		F6254DEA2477AFAE00A84F90 /* Rocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6254DED2477AFAE00A84F90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F6254DF32477AFAE00A84F90 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		F6254DF52477AFAE00A84F90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F6254DF72477AFAF00A84F90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6254DFA2477AFB000A84F90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +56,10 @@
 		F6254E112477AFB000A84F90 /* RocketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketUITests.swift; sourceTree = "<group>"; };
 		F6254E132477AFB000A84F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6254E1F2477B16F00A84F90 /* PlatformGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformGenerator.swift; sourceTree = "<group>"; };
+		F6BC044524789D35002FD80A /* FileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandler.swift; sourceTree = "<group>"; };
+		F6BC044724789EE3002FD80A /* IterationData.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = IterationData.csv; sourceTree = "<group>"; };
+		F6BC044A24789F1D002FD80A /* TutorialDatasetCSVAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialDatasetCSVAPI.swift; sourceTree = "<group>"; };
+		F6BC044D2478A084002FD80A /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,16 +126,18 @@
 		F6254DEC2477AFAE00A84F90 /* Rocket */ = {
 			isa = PBXGroup;
 			children = (
+				F6BC044C2478A064002FD80A /* Game scene */,
 				344FCCFB24788B910069796B /* Anton */,
 				F60A74982477C2C700FD0CB0 /* Entities */,
+				F6BC044924789F13002FD80A /* External code */,
+				F6BC044424789D1C002FD80A /* File handling */,
 				F6254E212477B17D00A84F90 /* Generators */,
 				F6254DED2477AFAE00A84F90 /* AppDelegate.swift */,
-				F6254DF32477AFAE00A84F90 /* GameScene.swift */,
-				F6254DF52477AFAE00A84F90 /* ViewController.swift */,
 				F6254DF72477AFAF00A84F90 /* Assets.xcassets */,
-				F6254DF92477AFB000A84F90 /* Main.storyboard */,
 				F6254DFC2477AFB000A84F90 /* Info.plist */,
+				F6254DF92477AFB000A84F90 /* Main.storyboard */,
 				F6254DFD2477AFB000A84F90 /* Rocket.entitlements */,
+				F6254DF52477AFAE00A84F90 /* ViewController.swift */,
 			);
 			path = Rocket;
 			sourceTree = "<group>";
@@ -158,6 +166,31 @@
 				F6254E1F2477B16F00A84F90 /* PlatformGenerator.swift */,
 			);
 			path = Generators;
+			sourceTree = "<group>";
+		};
+		F6BC044424789D1C002FD80A /* File handling */ = {
+			isa = PBXGroup;
+			children = (
+				F6BC044524789D35002FD80A /* FileHandler.swift */,
+				F6BC044724789EE3002FD80A /* IterationData.csv */,
+			);
+			path = "File handling";
+			sourceTree = "<group>";
+		};
+		F6BC044924789F13002FD80A /* External code */ = {
+			isa = PBXGroup;
+			children = (
+				F6BC044A24789F1D002FD80A /* TutorialDatasetCSVAPI.swift */,
+			);
+			path = "External code";
+			sourceTree = "<group>";
+		};
+		F6BC044C2478A064002FD80A /* Game scene */ = {
+			isa = PBXGroup;
+			children = (
+				F6BC044D2478A084002FD80A /* GameScene.swift */,
+			);
+			path = "Game scene";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +299,7 @@
 			files = (
 				F6254DF82477AFAF00A84F90 /* Assets.xcassets in Resources */,
 				F6254DFB2477AFB000A84F90 /* Main.storyboard in Resources */,
+				F6BC044824789EE3002FD80A /* IterationData.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,10 +325,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6254DF62477AFAE00A84F90 /* ViewController.swift in Sources */,
-				F6254DF42477AFAE00A84F90 /* GameScene.swift in Sources */,
+				F6BC044624789D35002FD80A /* FileHandler.swift in Sources */,
+				F6BC044E2478A084002FD80A /* GameScene.swift in Sources */,
 				F6254E202477B16F00A84F90 /* PlatformGenerator.swift in Sources */,
 				F6254DEE2477AFAE00A84F90 /* AppDelegate.swift in Sources */,
 				344FCCFD24788C160069796B /* Anton.swift in Sources */,
+				F6BC044B24789F1D002FD80A /* TutorialDatasetCSVAPI.swift in Sources */,
 				F60A749A2477C2D700FD0CB0 /* Ship.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,9 +496,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Rocket/Rocket.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 4B6T2H7DXN;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Rocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -471,6 +507,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Rocket.Rocket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -480,9 +517,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Rocket/Rocket.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = RBGT85CCQZ;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Rocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -491,6 +528,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Rocket.Rocket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
